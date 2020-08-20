@@ -1,7 +1,6 @@
 package fr.formation.sports;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -31,11 +30,5 @@ public class SportMeeting {
     private void addMatch(Match match) {
 	Objects.requireNonNull(match, "a match cannot be null");
 	matchs.add(match);
-    }
-
-    @Override
-    public String toString() {
-	return "Here's the list of results of this meeting : "
-	        + Arrays.asList(matchs).toString();
     }
 }

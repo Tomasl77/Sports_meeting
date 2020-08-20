@@ -6,18 +6,17 @@ public class TeamPlayerMatch extends Match {
 
     private Team teamTwo;
 
-    private String score;
-
-    public TeamPlayerMatch(Team teamOne, Team teamTwo, String score) {
+    public TeamPlayerMatch(Team teamOne, Team teamTwo) {
+	super();
 	this.teamOne = teamOne;
 	this.teamTwo = teamTwo;
-	this.score = score;
     }
 
     @Override
     void results() {
-	System.out.println(teamOne.getName() + " ("
-	        + teamOne.getPlayers().size() + ") VS " + teamTwo.getName()
-	        + " (" + teamTwo.getPlayers().size() + ") = " + score);
+	System.out.println(
+	        teamOne.getName() + " (" + teamOne.getPlayers().size() + ") VS "
+	                + teamTwo.getName() + " (" + teamTwo.getPlayers().size()
+	                + ") = " + super.getScore());
     }
 }
