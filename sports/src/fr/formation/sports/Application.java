@@ -18,6 +18,9 @@ public class Application {
 	Match forthMatch = new TeamPlayerMatch(teamThree, teamFour);
 	List<Match> sportMeeting = new ArrayList<>();
 	sportMeeting.add(firstMatch);
+	sportMeeting.add(secondMatch);
+	sportMeeting.add(thirdMatch);
+	sportMeeting.add(forthMatch);
 	beginChampionship(sportMeeting);
     }
 
