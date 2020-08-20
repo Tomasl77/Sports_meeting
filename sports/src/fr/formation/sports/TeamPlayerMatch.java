@@ -14,9 +14,8 @@ public class TeamPlayerMatch extends Match {
 
     @Override
     void results() {
-	System.out.println(
-	        teamOne.getName() + " (" + teamOne.getPlayers().size() + ") VS "
-	                + teamTwo.getName() + " (" + teamTwo.getPlayers().size()
-	                + ") = " + super.getScore());
+	System.out.println(teamOne.getName() + " (" + teamOne.getTeamSize()
+	        + ") VS " + teamTwo.getName() + " (" + teamTwo.getTeamSize()
+	        + ") = " + super.getScore());
     }
 }

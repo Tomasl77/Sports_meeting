@@ -1,7 +1,6 @@
 package fr.formation.sports;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -32,7 +31,7 @@ public class Team {
 	return name;
     }
 
-    public List<Player> getPlayers() {
-	return Collections.unmodifiableList(players);
+    public int getTeamSize() {
+	return players.size();
     }
 }

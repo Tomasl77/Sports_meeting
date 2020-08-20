@@ -1,5 +1,8 @@
 package fr.formation.sports;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Application {
 
     public static void main(String[] args) {
@@ -13,14 +16,12 @@ public class Application {
 	Team teamThree = new Team("Chocolatine", tomas, johanna);
 	Team teamFour = new Team("Pain aux chocolat", johanna, tomas);
 	Match forthMatch = new TeamPlayerMatch(teamThree, teamFour);
-	SportMeeting sportMeeting = new SportMeeting(firstMatch, secondMatch,
-	        thirdMatch, forthMatch);
+	List<Match> sportMeeting = new ArrayList<>();
+	sportMeeting.add(firstMatch);
 	beginChampionship(sportMeeting);
     }
 
-    private static void beginChampionship(SportMeeting sportMeeting) {
-	for (Match match : sportMeeting.getMatches()) {
-	    match.results();
-	}
+    private static void beginChampionship(List<Match> sportMeeting) {
+	SportMeeting.beginChampionship(sportMeeting);
     }
 }
