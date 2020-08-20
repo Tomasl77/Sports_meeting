@@ -1,6 +1,7 @@
 package fr.formation.sports;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public class SportMeeting {
     }
 
     public List<Match> getMatches() {
-	return matchs;
+	return Collections.unmodifiableList(matchs);
     }
 
     private void addMatch(Match match) {
