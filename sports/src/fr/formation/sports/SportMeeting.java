@@ -25,12 +25,9 @@ public class SportMeeting {
 
     public static void beginChampionship(List<Match> matchs) {
 	for (Match match : matchs) {
+	    match.saveScoreHalfTime();
 	    match.results();
 	}
-    }
-
-    private List<Match> getMatches() {
-	return matchs;
     }
 
     private void addMatch(Match match) {

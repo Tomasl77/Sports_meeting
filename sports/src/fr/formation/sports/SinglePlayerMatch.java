@@ -6,8 +6,9 @@ public class SinglePlayerMatch extends Match {
 
     private Player playerTwo;
 
-    public SinglePlayerMatch(Player playerOne, Player playerTwo) {
-	super();
+    public SinglePlayerMatch(Player playerOne, Player playerTwo,
+            Referee referee) {
+	super(referee);
 	this.playerOne = playerOne;
 	this.playerTwo = playerTwo;
     }
@@ -16,6 +17,7 @@ public class SinglePlayerMatch extends Match {
     void results() {
 	System.out.println(playerOne.getName() + " ( N°" + playerOne.getNumber()
 	        + ") VS " + playerTwo.getName() + " ( N°"
-	        + playerTwo.getNumber() + ") = " + super.getScore());
+	        + playerTwo.getNumber() + ") = " + super.getScore()
+	        + " Arbitre : " + super.getRefereeName());
     }
 }
